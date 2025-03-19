@@ -1,4 +1,8 @@
-# BOOLEAN_FUNCTION_MINIMIZATION
+### Name: Jayani N
+### Reg no: 24900024
+
+
+# EXP2-BOOLEAN_FUNCTION_MINIMIZATION
 
 **AIM:**
 
@@ -33,18 +37,45 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. */
 
-Developed by: RegisterNumber:*/
+      module exp2(a,b,c,d,w,x,y,z,f1,f2);
+      input a,b,c,d,w,x,y,z;
+      output f1,f2;
+      wire x1,x2,x3,x4,x5,y1,y2,y3,y4,y5;
+      assign x1=((~a)&(~b)&(~c)&(~d));
+      assign x2=(a&(~c)&(~d));
+      assign x3=((~b)&(c)&(~d));
+      assign x4=((~a)&(b)&(c)&(d));
+      assign x5=(b&(~c)&(d));
+      assign f1=x1|x2|x3|x4|x5;
+      
+      assign y1=(x&(~y)&(z));
+      assign y2=((~x)&(~y)&z);
+      assign y3=((~w)&x&y);
+      assign y4=(w&(~x)&(y));
+      assign y5=(w&x&y);
+      assign f2=y1|y2|y3|y4|y5;
+      endmodule
 
 
-**RTL realization**
 
-**Output:**
+
+
+**Truth Table:**
+
 
 **RTL**
 
-**Timing Diagram**
+![Screenshot 2025-03-19 082859](https://github.com/user-attachments/assets/43e2bebb-c89c-454f-a2c9-3dfe274233d8)
+
+![Screenshot 2025-03-19 084254](https://github.com/user-attachments/assets/77f305ee-4fa5-405b-9b70-aecde40ea7e3)
+
+
+
+**Waveform**
+
+![Screenshot 2025-03-19 084910](https://github.com/user-attachments/assets/ab529e03-3395-4706-ae73-2123dce2b70b)
 
 **Result:**
 
